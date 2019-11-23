@@ -8,10 +8,9 @@
         <!--Script to remove an element from an  
             array using spice method-->
         <script> 
-            if (localStorage == null) {
-                
-                localStorage.setItem('data', ["1", "2"])
-                console.log('yes')}; 
+            
+            localStorage.setItem('data', ["1", "2"])
+       
             console.log(localStorage)
             document.getElementById("address").innerHTML = localStorage.getItem('data'); 
             function remove_ele() { 
