@@ -1,0 +1,22 @@
+
+<html> 
+    <body> 
+        <h1>ab test test html</h1>
+        <button id = "link" onclick="remove_ele()">please click the bottom first to generate the survey link</button> 
+        <p id = "address"></p> 
+  
+        <!--Script to remove an element from an  
+            array using spice method-->
+        <script> 
+            var scope = ["1", "2"]
+            if (localStorage == null) {
+                localStorage.setItem('data', scope)}; 
+            document.getElementById("address").innerHTML = localStorage.getItem('data')[0]; 
+            function remove_ele() { 
+               localStorage.getItem('data').splice(0, 1); 
+               document.getElementById("address").innerHTML = localStorage.getItem('data')[0]; 
+             } 
+        </script> 
+    </body> 
+</html> 
+
