@@ -1,4 +1,5 @@
 
+
 <html> 
     <body> 
         <h1>ab test test html</h1>
@@ -9,24 +10,36 @@
             array using spice method-->
         <script> 
             
-            var x = {
+            function shuffleArray(d) {
+             for (var c = d.length - 1; c > 0; c--) {
+             var b = Math.floor(Math.random() * (c + 1));
+             var a = d[c];
+             d[c] = d[b];
+             d[b] = a;
+                     }
+              return d
+             };
+             var x = {
                  "dataCache": ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18',
-                              '19','20']
+                              '19','20','21','22','23','24','25','26','27','28','29','30]
                         }
            
             
-            if (!localStorage.getItem('Data1')) {   
-                localStorage.setItem('Data1', JSON.stringify(x))};
+            if (!localStorage.getItem('Data')) {   
+                localStorage.setItem('Data', JSON.stringify(x))};
             
             function remove_ele() { 
-               getItem = JSON.parse(localStorage.getItem('Data1'));
-               document.getElementById("address").innerHTML = getItem.dataCache[0]; 
-               getItem.dataCache.splice(0, 1);
-               localStorage.setItem('Data1', JSON.stringify(getItem));
+               getItem = JSON.parse(localStorage.getItem('Data'));
+               selection = shuffleArray(getItem.dataCache)
+               document.getElementById("address").innerHTML = selection)[0]; 
+               selection.splice(0, 1);
+               localStorage.setItem('Data', JSON.stringify(selection));
                
              } 
             
         </script> 
     </body> 
 </html> 
+
+
 
