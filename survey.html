@@ -9,14 +9,31 @@
             array using spice method-->
         <script> 
             
-            localStorage.setItem('data', 'hello')
+            var x = {
+                 "dataCache": [{
+                    "id": 20,
+                    "quantity": 1,
+                    "total": 100000,
+                    "request_date": "27-08-2017 20:31:00"
+                    }, {
+                    "id": 53,
+                    "quantity": 1,
+                        "total": 200000,
+                        "request_date": "27-08-2017 20:38:00"
+                        }],
+                        "expired": "2017-08-28T03:55:21.521Z"
+                        }
        
-            console.log(localStorage)
-            document.getElementById("address").innerHTML = localStorage.getItem('data'); 
-            function remove_ele() { 
-               localStorage.getItem('data').splice(0, 1); 
-               document.getElementById("address").innerHTML = localStorage.getItem('data'); 
-             } 
+           
+                
+            localStorage.setItem('storeData', JSON.stringify(x));
+
+            var getItem = JSON.parse(localStorage.getItem('storeData'));
+
+            getItem.dataCache = getItem.dataCache.splice(0, 1);
+            console.log(getItem); // the modified object
+
+            localStorage.setItem('storeData', JSON.stringify(getItem))
         </script> 
     </body> 
 </html> 
