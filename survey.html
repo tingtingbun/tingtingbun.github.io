@@ -8,9 +8,9 @@
         <!--Script to remove an element from an  
             array using spice method-->
         <script> 
-            var scope = ["1", "2"]
+            
             if (localStorage == null) {
-                localStorage.setItem('data', scope)}; 
+                localStorage.setItem('data', ["1", "2"])}; 
             console.log(localStorage)
             document.getElementById("address").innerHTML = localStorage.getItem('data')[0]; 
             function remove_ele() { 
