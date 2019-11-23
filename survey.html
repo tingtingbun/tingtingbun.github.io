@@ -9,28 +9,16 @@
             array using spice method-->
         <script> 
             console.log(localStorage)
-            localStorage.clear()
             var x = {
-                 "dataCache": [{
-                    "id": 20,
-                    "quantity": 1,
-                    "total": 100000,
-                    "request_date": "27-08-2017 20:31:00"
-                    }, {
-                    "id": 53,
-                    "quantity": 1,
-                        "total": 200000,
-                        "request_date": "27-08-2017 20:38:00"
-                        }],
-                        "expired": "2017-08-28T03:55:21.521Z"
+                 "dataCache": ['1','2','3','4']
                         }
            
             
-            if (!localStorage.getItem('storeData')) {   
-                localStorage.setItem('storeData', JSON.stringify(x))};
+            if (!localStorage.getItem('Data')) {   
+                localStorage.setItem('Data', JSON.stringify(x))};
             
             function remove_ele() { 
-               getItem = JSON.parse(localStorage.getItem('storeData'));
+               getItem = JSON.parse(localStorage.getItem('Data'));
                document.getElementById("address").innerHTML = getItem.dataCache[0]; 
                getItem.dataCache = getItem.dataCache.splice(0, 1);
                localStorage.setItem('storeData', JSON.stringify(getItem));
