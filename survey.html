@@ -21,7 +21,7 @@
                getItem = JSON.parse(localStorage.getItem('Data'));
                document.getElementById("address").innerHTML = getItem.dataCache[0]; 
                getItem.dataCache = getItem.dataCache.splice(0, 1);
-               localStorage.setItem('storeData', JSON.stringify(getItem));
+               localStorage.setItem('Data', JSON.stringify(getItem));
                
              } 
             
