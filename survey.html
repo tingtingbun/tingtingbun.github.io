@@ -8,7 +8,8 @@
         <!--Script to remove an element from an  
             array using spice method-->
         <script> 
-            
+            console.log(localStorage)
+            localStorage.clear()
             var x = {
                  "dataCache": [{
                     "id": 20,
@@ -23,18 +24,19 @@
                         }],
                         "expired": "2017-08-28T03:55:21.521Z"
                         }
-       
            
+            
             if (!localStorage.getItem('storeData')) {   
-                localStorage.setItem('storeData', JSON.stringify(x))
-                console.log('ues')};
-
-            var getItem = JSON.parse(localStorage.getItem('storeData'));
-
-            getItem.dataCache = getItem.dataCache.splice(0, 1);
-            console.log(getItem); // the modified object
-
-            localStorage.setItem('storeData', JSON.stringify(getItem))
+                localStorage.setItem('storeData', JSON.stringify(x))};
+            
+            function remove_ele() { 
+               getItem = JSON.parse(localStorage.getItem('storeData'));
+               document.getElementById("address").innerHTML = getItem.dataCache[0]; 
+               getItem.dataCache = getItem.dataCache.splice(0, 1);
+               localStorage.setItem('storeData', JSON.stringify(getItem));
+               
+             } 
+            
         </script> 
     </body> 
 </html> 
