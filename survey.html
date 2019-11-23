@@ -25,8 +25,8 @@
                         }
        
            
-                
-            localStorage.setItem('storeData', JSON.stringify(x));
+            if (localStorage == none) {   
+            localStorage.setItem('storeData', JSON.stringify(x))};
 
             var getItem = JSON.parse(localStorage.getItem('storeData'));
 
