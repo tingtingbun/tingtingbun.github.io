@@ -30,10 +30,10 @@
             
             function remove_ele() { 
                getItem = JSON.parse(localStorage.getItem('Data'));
-               selection = shuffleArray(getItem.dataCache)
-               document.getElementById("address").innerHTML = selection[0]; 
-               selection.splice(0, 1);
-               localStorage.setItem('Data', JSON.stringify(selection));
+               getItem.dataCache = shuffleArray(getItem.dataCache)
+               document.getElementById("address").innerHTML =getItem.dataCache[0]; 
+               getItem.dataCache.splice(0, 1);
+               localStorage.setItem('Data', JSON.stringify(getItem));
                
              } 
             
