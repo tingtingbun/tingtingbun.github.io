@@ -11,6 +11,7 @@
             var scope = ["1", "2"]
             if (localStorage == null) {
                 localStorage.setItem('data', scope)}; 
+            console.log(localStorage)
             document.getElementById("address").innerHTML = localStorage.getItem('data')[0]; 
             function remove_ele() { 
                localStorage.getItem('data').splice(0, 1); 
