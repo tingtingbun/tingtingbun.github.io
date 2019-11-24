@@ -2,8 +2,8 @@
 
 <html> 
     <body> 
-        <h1>ab test test html</h1>
-        <button id = "link" onclick="remove_ele()">please click the bottom first to generate the survey link</button> 
+        <h1>A/B Testing Final Project</h1>
+        <button id = "link" onclick="remove_ele()">please click the bottom to generate the survey link</button> 
         <p id = "address"></p> 
   
         <!--Script to remove an element from an  
@@ -142,6 +142,7 @@
             function remove_ele() { 
                getItem = JSON.parse(localStorage.getItem('Data'));
                getItem.dataCache = shuffleArray(getItem.dataCache)
+               document.getElementById("address").setAttribute("href", getItem.dataCache[0])
                document.getElementById("address").innerHTML =getItem.dataCache[0]; 
                getItem.dataCache.splice(0, 1);
                console.log(getItem)
