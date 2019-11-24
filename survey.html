@@ -5,7 +5,7 @@
         <h1>A/B Testing Final Project</h1>
         <button id = "link" onclick="remove_ele()">please click the bottom to generate the survey link</button> 
         <p id = "address"></p> 
-        <a id = "url"></a> 
+        <a id = "url">Link Here</a> 
   
         
         <script> 
@@ -140,6 +140,7 @@
                 localStorage.setItem('Data', JSON.stringify(x))};
             
             function remove_ele() { 
+               alert("There may be links unfound, please keep generating the link untill the working one")
                getItem = JSON.parse(localStorage.getItem('Data'));
                getItem.dataCache = shuffleArray(getItem.dataCache);
                document.getElementById("address").innerHTML =  getItem.dataCache[0];
