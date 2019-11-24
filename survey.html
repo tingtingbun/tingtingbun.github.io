@@ -140,7 +140,7 @@
                 localStorage.setItem('Data', JSON.stringify(x))};
             
             function remove_ele() { 
-               alert("There may be links unfound, please keep generating the link untill the working one")
+               alert("There may be links unfound, if that is the case, please come back and generate another one")
                getItem = JSON.parse(localStorage.getItem('Data'));
                getItem.dataCache = shuffleArray(getItem.dataCache);
                document.getElementById("address").innerHTML =  getItem.dataCache[0];
