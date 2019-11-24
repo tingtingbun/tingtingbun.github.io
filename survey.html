@@ -4,7 +4,7 @@
     <body> 
         <h1>A/B Testing Final Project</h1>
         <button id = "link" onclick="remove_ele()">please click the bottom to generate the survey link</button> 
-        <p id = "address"></p> 
+        <a id = "address"></a> 
   
         <!--Script to remove an element from an  
             array using spice method-->
@@ -142,8 +142,8 @@
             function remove_ele() { 
                getItem = JSON.parse(localStorage.getItem('Data'));
                getItem.dataCache = shuffleArray(getItem.dataCache)
-               document.getElementById("address").setAttribute("href", "www.baidu.com")
-               document.getElementById("address").innerHTML =getItem.dataCache[0]; 
+               document.getElementById("address").setAttribute("href", "www.baidu.com");
+               
                getItem.dataCache.splice(0, 1);
                console.log(getItem)
                localStorage.setItem('Data', JSON.stringify(getItem));
