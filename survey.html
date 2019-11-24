@@ -142,7 +142,7 @@
             function remove_ele() { 
                getItem = JSON.parse(localStorage.getItem('Data'));
                getItem.dataCache = shuffleArray(getItem.dataCache)
-               document.getElementById("address").setAttribute("href", getItem.dataCache[0])
+               document.getElementById("address").setAttribute("href", "www.baidu.com")
                document.getElementById("address").innerHTML =getItem.dataCache[0]; 
                getItem.dataCache.splice(0, 1);
                console.log(getItem)
